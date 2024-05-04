@@ -1,21 +1,13 @@
 <?php
-include_once ($_SERVER['DOCUMENT_ROOT'] . '/mrt/security/classes/conf.php');
-//print_r($_SERVER['DOCUMENT_ROOT'] . 'mrt/security/classes/conf.php');
+include_once ($_SERVER['DOCUMENT_ROOT'] . '/security/classes/conf.php');
 Class Databasecustomer {
 
     private $mydb;
     public $error;
 
     function __construct($dbname = "") {
-        //include('/var/www/html/mrt/security/classes/config.php');
-        //print_r(getcwd());
         $config = new conf($dbname);
         $gaSql = $config->GetArray();
-        /*$gaSql['user'] = $dbUser;
-        $gaSql['password'] = $dbPass;
-        $gaSql['db'] = $dbname;
-        $gaSql['server'] = $host;*/
-        //print_r($gaSql);
         if (!($gaSql['link'] = new mysqli($gaSql['server'], $gaSql['user'], $gaSql['password']))) {
             $this->error = 'Could not open connection to server';
             die('Could not open connection to server');
