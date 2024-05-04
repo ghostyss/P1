@@ -1,8 +1,6 @@
 <?php
 include_once 'header.php';
 ?>
-<!-- start: PAGE -->
-
 <div class="main-content">
     <!-- start: PANEL CONFIGURATION MODAL FORM -->
     <div class="modal fade" id="panel-config" tabindex="-1" role="dialog" aria-hidden="true">
