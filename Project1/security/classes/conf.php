@@ -11,11 +11,7 @@ class conf {
         if (!$dbname) {
             $curpageURL = $_SERVER["SERVER_NAME"];
             $a = explode('.', $curpageURL);
-            if ($a[0] == 'test') {
-                $this->Db = 'king';
-            } else {
-                $this->Db = $a[0];
-            }
+            $this->Db = $a[0];
         } else {
             $this->Db = $dbname;
         }
